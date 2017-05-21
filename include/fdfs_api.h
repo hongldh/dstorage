@@ -11,6 +11,11 @@
 #include <sys/wait.h>
 #include "fdfs_client.h"
 #include "logger.h"
+#include "make_log.h"
+#include "redis_op.h"
+
+#define ROP_MODULE "test"
+#define ROP_PROC "redis_op"
 
 #define FILE_ID_LEN (128)
 

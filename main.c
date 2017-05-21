@@ -15,7 +15,12 @@ int main(int argc, char *argv[])
     int retn = 0;
     char file_id[FILE_ID_LEN] = {0};
 
-    retn = fdfs_upload_by_filename1("./test/abc.txt", file_id);
+	if(argc<2)
+	{
+		printf("Usage:./main filename\n");
+		return -1;
+	}
+    retn = fdfs_upload_by_filename1(argv[1], file_id);
     if (retn != 0) {
         printf("fdfs_upload_error");
         return 1;
